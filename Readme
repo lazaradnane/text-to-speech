@@ -1,0 +1,21 @@
+les étapes à faire pour faire fonctionner la solution :
+
+	- Preparation d'un environement de travail avec la version python == 3.6
+	- Installation des bibliotheques dont on a besoin, les principales sont:
+		- google-auth==1.23.0
+		- google-cloud-speech==2.0.1
+		- Wave==0.0.2
+	- Creation d'un fichier python .py qui contient: 
+		- Importation des bibliotheque necessaire 
+		- une focntion qui lit un audio selon le chemin donnees
+		- declaration d'un client qui utilise le credentials donnees par l'API google cloud
+		- un variable configuration qui contient les informations sur l'audio qu'on a deja lit
+		- donnees l'audio et le variable configuration a la fonction responsable pour retourner
+		  le speech en text comme response qui est dans le client
+		- affichage du text
+	- Deploiement dans flask en creant deux fichier html :
+		- Le premier contient Un input de type WAV/MP3 ou autre extension de type « son »
+		- Un bouton avec label « Speech to Text » qui va faire appel au Service de Speech to
+		  Text de l’API Google Cloud
+		- Le deuxieme contient une zone de texte ou sera visible le texte output
+	- Et enfin le deploiment dans Heroku 
